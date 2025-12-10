@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Property Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- Loader Overlay (small animation on page load) -->
+    <div id="page-loader">
+        <div class="loader-circle"></div>
+        <p class="loader-text">Loading your dream properties...</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-building-check me-2"></i>Real Estate Portal
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="properties.html">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a
+                            class="btn btn-success btn-sm"
+                            href="https://wa.me/919080574774?text=Hi%2C%20I%27m%20interested%20in%20your%20properties."
+                            target="_blank"
+                        >
+                            <i class="bi bi-whatsapp me-1"></i> WhatsApp Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text -->
+                <div class="col-lg-6 hero-text reveal-on-scroll" data-delay="0">
+                    <span class="badge rounded-pill highlight-badge mb-3">
+                        <i class="bi bi-star-fill me-2"></i>
+                        Premium Real Estate Portal
+                    </span>
+                    <h1 class="display-5 fw-bold mb-3">
+                        Find your next <span class="text-gradient">dream home</span>
+                        with us.
+                    </h1>
+                    <p class="lead text-light-50 mb-4">
+                        Browse verified properties across top cities. Filter by price,
+                        city, and property type. Contact instantly via WhatsApp or email.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="properties.html" class="btn btn-primary btn-lg shadow-sm">
+                            <i class="bi bi-search me-2"></i> Browse Properties
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone-outbound me-2"></i> Talk to Us
+                        </a>
+                    </div>
+                    <div class="hero-stats mt-4 d-flex flex-wrap gap-4">
+                        <div>
+                            <h3 class="mb-0">150+</h3>
+                            <span class="text-light-50 small">Active Listings</span>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">10+</h3>
+                            <span class="text-light-50 small">Cities Covered</span>
+                        </div>
+                        <div>
+                            <h3 class="mb-0">100%</h3>
+                            <span class="text-light-50 small">Verified Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Card -->
+                <div class="col-lg-5 ms-lg-auto mt-5 mt-lg-0 reveal-on-scroll" data-delay="150">
+                    <div class="search-card shadow-lg">
+                        <h5 class="mb-3">
+                            <i class="bi bi-funnel me-2"></i>Quick Property Search
+                        </h5>
+                        <p class="small text-muted mb-3">
+                            Filter by city, price and type. Detailed filters will be
+                            available on <strong>Properties</strong> page.
+                        </p>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">City</label>
+                                <select class="form-select">
+                                    <option selected>Choose city</option>
+                                    <option>Chennai</option>
+                                    <option>Bangalore</option>
+                                    <option>Hyderabad</option>
+                                    <option>Mumbai</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">Min Price</label>
+                                    <select class="form-select">
+                                        <option>₹10 Lakhs</option>
+                                        <option>₹20 Lakhs</option>
+                                        <option>₹50 Lakhs</option>
+                                        <option>₹1 Cr</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">Max Price</label>
+                                    <select class="form-select">
+                                        <option>₹50 Lakhs</option>
+                                        <option>₹1 Cr</option>
+                                        <option>₹1.5 Cr</option>
+                                        <option>₹2 Cr+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Property Type</label>
+                                <select class="form-select">
+                                    <option>Apartment</option>
+                                    <option>Villa</option>
+                                    <option>Plot</option>
+                                    <option>Commercial</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100 search-cta">
+                                <i class="bi bi-search me-1"></i> Search Properties
+                            </button>
+                            <p class="search-note small text-muted mt-2">
+                                Note: This is a demo home search. Full filtering logic will
+                                be available in <strong>properties.html</strong>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator d-none d-md-flex">
+            <span>Scroll</span>
+            <i class="bi bi-arrow-down"></i>
+        </div>
+    </header>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="py-5 bg-light" id="how-it-works">
+        <div class="container">
+            <div class="section-header text-center mb-4 reveal-on-scroll">
+                <span class="section-tagline">Process</span>
+                <h2 class="section-title">How it works</h2>
+                <p class="section-subtitle">
+                    Your client can clearly understand the end-to-end flow:
+                    browse, filter, view details and inquire.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 reveal-on-scroll" data-delay="0">
+                    <div class="info-card h-100">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5>1. Browse & Filter</h5>
+                        <p>
+                            Users can explore properties by price, city and type from the
+                            <strong>Properties</strong> page with dynamic filters.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-on-scroll" data-delay="100">
+                    <div class="info-card h-100">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-house-heart"></i>
+                        </div>
+                        <h5>2. View Property Details</h5>
+                        <p>
+                            Each listing opens a detailed page with full description,
+                            images, amenities and location.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-on-scroll" data-delay="200">
+                    <div class="info-card h-100">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <h5>3. Inquire Instantly</h5>
+                            <p>
+                                From the detail page, users can message directly via
+                                WhatsApp or email, generating high-quality leads.
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROPERTIES SECTION -->
+    <section class="py-5" id="featured">
+        <div class="container">
+            <div class="section-header d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div class="reveal-on-scroll">
+                    <span class="section-tagline">Featured</span>
+                    <h2 class="section-title">Featured Properties</h2>
+                    <p class="section-subtitle">
+                        Show some sample listings so client can visualize how actual
+                        properties will look.
+                    </p>
+                </div>
+                <a href="properties.html" class="btn btn-outline-primary btn-sm reveal-on-scroll" data-delay="100">
+                    View all properties <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Property Card 1 -->
+                <div class="col-md-4 reveal-on-scroll" data-delay="0">
+                    <div class="property-card h-100">
+                        <div class="property-image-wrapper">
+                            <span class="badge feature-badge">Hot</span>
+                            <img
+                                src="images/property-1."
+                                alt="Luxury Apartment"
+                                class="img-fluid property-image"
+                            />
+                        </div>
+                        <div class="property-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">2 BHK Luxury Apartment</h5>
+                                <span class="property-price">₹75 Lakhs</span>
+                            </div>
+                            <p class="small text-muted mb-2">
+                                Chennai • Apartment • 1,100 Sq.ft
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-geo-alt me-1"></i> OMR
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-car-front me-1"></i> 1 Parking
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-building me-1"></i> Gated Community
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="property-details.html" class="btn btn-sm btn-primary">
+                                    View Details
+                                </a>
+                                <a
+                                    href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20the%202%20BHK%20Luxury%20Apartment%20in%20Chennai."
+                                    class="btn btn-sm btn-outline-success"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="col-md-4 reveal-on-scroll" data-delay="100">
+                    <div class="property-card h-100">
+                        <div class="property-image-wrapper">
+                            <span class="badge feature-badge secondary">Featured</span>
+                            <img
+                                src="images/property-2.jpg"
+                                alt="Villa"
+                                class="img-fluid property-image"
+                            />
+                        </div>
+                        <div class="property-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">3 BHK Premium Villa</h5>
+                                <span class="property-price">₹1.5 Cr</span>
+                            </div>
+                            <p class="small text-muted mb-2">
+                                Bangalore • Villa • 2,000 Sq.ft
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-tree me-1"></i> Private Garden
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-droplet me-1"></i> Swimming Pool
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="property-details.html" class="btn btn-sm btn-primary">
+                                    View Details
+                                </a>
+                                <a
+                                    href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20the%203%20BHK%20Villa%20in%20Bangalore."
+                                    class="btn btn-sm btn-outline-success"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="col-md-4 reveal-on-scroll" data-delay="200">
+                    <div class="property-card h-100">
+                        <div class="property-image-wrapper">
+                            <img
+                                src="images/property-3.jpg"
+                                alt="Commercial Space"
+                                class="img-fluid property-image"
+                            />
+                        </div>
+                        <div class="property-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Commercial Office Space</h5>
+                                <span class="property-price">₹90 Lakhs</span>
+                            </div>
+                            <p class="small text-muted mb-2">
+                                Hyderabad • Commercial • 1,500 Sq.ft
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-building-gear me-1"></i> Ready to Move
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark small">
+                                    <i class="bi bi-lightning-charge me-1"></i> 24x7 Power
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="property-details.html" class="btn btn-sm btn-primary">
+                                    View Details
+                                </a>
+                                <a
+                                    href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20the%20Commercial%20Office%20Space%20in%20Hyderabad."
+                                    class="btn btn-sm btn-outline-success"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORE BY CITY SECTION -->
+    <section class="py-5 bg-light" id="cities">
+        <div class="container">
+            <div class="section-header text-center mb-4 reveal-on-scroll">
+                <span class="section-tagline">Locations</span>
+                <h2 class="section-title">Explore by city</h2>
+                <p class="section-subtitle">
+                    Show your client that properties can be grouped by different cities
+                    for better user experience.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 reveal-on-scroll" data-delay="0">
+                    <div class="city-card">
+                        <div class="city-image-wrapper">
+                            <img src="images/city-1.jpg" alt="Chennai" class="img-fluid" />
+                        </div>
+                        <div class="city-content">
+                            <h5>Chennai</h5>
+                            <p class="small text-muted mb-2">45+ active listings</p>
+                            <a href="properties.html" class="city-link">
+                                View Chennai properties <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal-on-scroll" data-delay="100">
+                    <div class="city-card">
+                        <div class="city-image-wrapper">
+                            <img src="images/city-2.jpg" alt="Bangalore" class="img-fluid" />
+                        </div>
+                        <div class="city-content">
+                            <h5>Bangalore</h5>
+                            <p class="small text-muted mb-2">60+ active listings</p>
+                            <a href="properties.html" class="city-link">
+                                View Bangalore properties <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal-on-scroll" data-delay="200">
+                    <div class="city-card">
+                        <div class="city-image-wrapper">
+                            <img src="images/city-3.jpg" alt="Hyderabad" class="img-fluid" />
+                        </div>
+                        <div class="city-content">
+                            <h5>Hyderabad</h5>
+                            <p class="small text-muted mb-2">35+ active listings</p>
+                            <a href="properties.html" class="city-link">
+                                View Hyderabad properties <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="py-5" id="why-us">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <span class="section-tagline">Why Choose Us</span>
+                    <h2 class="section-title">Built for real estate business</h2>
+                    <p class="section-subtitle">
+                        This portal is designed to be simple for users and powerful for
+                        your client – clear navigation, smooth animations and direct
+                        inquiry channels.
+                    </p>
+                    <ul class="list-unstyled feature-list">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i> Multi-page structure
+                            just like real portals.
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i> Clear mapping of
+                            filters, detail pages and inquiry actions.
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i> Fully responsive and
+                            optimized for mobile.
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i> WhatsApp and email
+                            integrated for lead generation.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 reveal-on-scroll" data-delay="150">
+                    <div class="why-card-grid">
+                        <div class="why-card">
+                            <i class="bi bi-phone"></i>
+                            <h6>Mobile First</h6>
+                            <p>Perfectly optimized for mobile users searching on the go.</p>
+                        </div>
+                        <div class="why-card">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <h6>Client Friendly</h6>
+                            <p>Each section clearly explains business flow to your client.</p>
+                        </div>
+                        <div class="why-card">
+                            <i class="bi bi-code-slash"></i>
+                            <h6>Clean Code</h6>
+                            <p>Separation into HTML, CSS and JS files for easy maintenance.</p>
+                        </div>
+                        <div class="why-card">
+                            <i class="bi bi-whatsapp"></i>
+                            <h6>Direct Leads</h6>
+                            <p>Instant WhatsApp messaging from property details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-5 cta-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8 reveal-on-scroll">
+                    <h2 class="text-white mb-2">Ready to continue the project?</h2>
+                    <p class="text-light-70 mb-0">
+                        Next step: we will build <strong>properties.html</strong> with
+                        full filter system (price, city, type) using JavaScript and show
+                        dynamic cards.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end reveal-on-scroll" data-delay="100">
+                    <a href="properties.html" class="btn btn-light btn-lg">
+                        Next: Properties Page <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6 small">
+                    © <span id="year"></span> Real Estate Portal. All rights reserved.
+                </div>
+                <div class="col-md-6 text-md-end small">
+                    Designed for demo purpose – Frontend only (no database).
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="./js/script.js" defer></script>
+</body>
+</html>

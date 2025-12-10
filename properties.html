@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Properties | Real Estate Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================= -->
+    <!-- BOOTSTRAP CSS -->
+    <!-- ============================= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ============================= -->
+    <!-- BOOTSTRAP ICONS -->
+    <!-- ============================= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- ============================= -->
+    <!-- MAIN PROJECT CSS FILE -->
+    <!-- ============================= -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================================================== -->
+<!-- GLOBAL LOADER (USED IN ALL PAGES - script.js) -->
+<!-- ===================================================== -->
+<div id="page-loader">
+    <div class="loader-circle"></div>
+    <p class="loader-text">Loading properties...</p>
+</div>
+
+<!-- ===================================================== -->
+<!-- NAVBAR - COMMON FOR ALL PAGES -->
+<!-- ===================================================== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-building"></i> Real Estate
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="properties.html">Properties</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================================================== -->
+<!-- PAGE HEADER / BREADCRUMB SECTION -->
+<!-- ===================================================== -->
+<section class="py-5 mt-5 text-white text-center" style="background:linear-gradient(120deg,#0d6efd,#21c997)">
+    <div class="container reveal-on-scroll">
+        <h1 class="fw-bold">Browse Properties</h1>
+        <p class="mb-0">Filter by city, price and property type</p>
+    </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- FILTER PANEL - PROPERTIES PAGE -->
+<!-- ===================================================== -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row g-3 align-items-end reveal-on-scroll">
+
+            <!-- City Filter -->
+            <div class="col-md-4">
+                <label class="form-label">City</label>
+                <select class="form-select" id="filterCity">
+                    <option value="all">All Cities</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
+            </div>
+
+            <!-- Type Filter -->
+            <div class="col-md-4">
+                <label class="form-label">Property Type</label>
+                <select class="form-select" id="filterType">
+                    <option value="all">All Types</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="col-md-4">
+                <label class="form-label">Max Price</label>
+                <select class="form-select" id="filterPrice">
+                    <option value="all">Any</option>
+                    <option value="50">Up to 50 Lakhs</option>
+                    <option value="100">Up to 1 Crore</option>
+                    <option value="200">Up to 2 Crore</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- PROPERTY LIST GRID - PROPERTIES PAGE -->
+<!-- ===================================================== -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4" id="propertiesContainer">
+
+            <!-- ===================================================== -->
+            <!-- Property Card 1  - properties-page -->
+            <!-- ===================================================== -->
+            <div class="col-md-4 property-item reveal-on-scroll"
+                 data-city="Chennai" data-type="Apartment" data-price="75">
+                <div class="property-card h-100">
+                    <div class="property-image-wrapper">
+                        <img src="images/property-1" class="property-image img-fluid">
+                    </div>
+                    <div class="property-content">
+                        <h5>2 BHK Luxury Apartment</h5>
+                        <p class="small text-muted">Chennai • Apartment • 1100 Sq.ft</p>
+                        <span class="property-price">₹75 Lakhs</span>
+                        <div class="d-flex justify-content-between mt-3">
+                            <a href="property-details.html" class="btn btn-primary btn-sm">View</a>
+                            <a href="https://wa.me/919876543210" target="_blank"
+                               class="btn btn-outline-success btn-sm">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================================================== -->
+            <!-- Property Card 2  - properties-page -->
+            <!-- ===================================================== -->
+            <div class="col-md-4 property-item reveal-on-scroll"
+                 data-city="Bangalore" data-type="Villa" data-price="150">
+                <div class="property-card h-100">
+                    <div class="property-image-wrapper">
+                        <img src="images/property-2.jpg" class="property-image img-fluid">
+                    </div>
+                    <div class="property-content">
+                        <h5>3 BHK Premium Villa</h5>
+                        <p class="small text-muted">Bangalore • Villa • 2000 Sq.ft</p>
+                        <span class="property-price">₹1.5 Cr</span>
+                        <div class="d-flex justify-content-between mt-3">
+                            <a href="property-details.html" class="btn btn-primary btn-sm">View</a>
+                            <a href="https://wa.me/919876543210" target="_blank"
+                               class="btn btn-outline-success btn-sm">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================================================== -->
+            <!-- Property Card 3  - properties-page -->
+            <!-- ===================================================== -->
+            <div class="col-md-4 property-item reveal-on-scroll"
+                 data-city="Hyderabad" data-type="Commercial" data-price="90">
+                <div class="property-card h-100">
+                    <div class="property-image-wrapper">
+                        <img src="images/property-3.jpg" class="property-image img-fluid">
+                    </div>
+                    <div class="property-content">
+                        <h5>Commercial Office Space</h5>
+                        <p class="small text-muted">Hyderabad • Commercial • 1500 Sq.ft</p>
+                        <span class="property-price">₹90 Lakhs</span>
+                        <div class="d-flex justify-content-between mt-3">
+                            <a href="property-details.html" class="btn btn-primary btn-sm">View</a>
+                            <a href="https://wa.me/919876543210" target="_blank"
+                               class="btn btn-outline-success btn-sm">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- FOOTER - COMMON -->
+<!-- ===================================================== -->
+<footer class="py-4 bg-dark text-center text-light">
+    <p class="mb-0 small">© 2025 Real Estate Portal | Properties Page</p>
+</footer>
+
+<!-- ===================================================== -->
+<!-- BOOTSTRAP JS -->
+<!-- ===================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================== -->
+<!-- MAIN PROJECT JS -->
+<!-- ===================================================== -->
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
